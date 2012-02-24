@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		79ED4B0A14F81D5800F3C6E6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79ED4B0914F81D5800F3C6E6 /* Cocoa.framework */; };
+		79ED4B1414F81D5800F3C6E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79ED4B1214F81D5800F3C6E6 /* InfoPlist.strings */; };
+		79ED4B1714F81D5800F3C6E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79ED4B1614F81D5800F3C6E6 /* main.m */; };
+		79ED4B1A14F81D5800F3C6E6 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 79ED4B1814F81D5800F3C6E6 /* Credits.rtf */; };
+		79ED4B1D14F81D5800F3C6E6 /* PingTrayAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79ED4B1C14F81D5800F3C6E6 /* PingTrayAppDelegate.m */; };
+		79ED4B2014F81D5800F3C6E6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79ED4B1E14F81D5800F3C6E6 /* MainMenu.xib */; };
+		79ED4B2714F81D5800F3C6E6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79ED4B0914F81D5800F3C6E6 /* Cocoa.framework */; };
+		79ED4B2F14F81D5800F3C6E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79ED4B2D14F81D5800F3C6E6 /* InfoPlist.strings */; };
+		79ED4B3214F81D5800F3C6E6 /* PingTrayTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 79ED4B3114F81D5800F3C6E6 /* PingTrayTests.h */; };
+		79ED4B3414F81D5800F3C6E6 /* PingTrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79ED4B3314F81D5800F3C6E6 /* PingTrayTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		79ED4B2814F81D5800F3C6E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79ED4AFC14F81D5800F3C6E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79ED4B0414F81D5800F3C6E6;
+			remoteInfo = PingTray;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		79ED4B0514F81D5800F3C6E6 /* PingTray.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PingTray.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79ED4B0914F81D5800F3C6E6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		79ED4B0C14F81D5800F3C6E6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		79ED4B0D14F81D5800F3C6E6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		79ED4B0E14F81D5800F3C6E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		79ED4B1114F81D5800F3C6E6 /* PingTray-Info.plist */ = {isa = PBXFileReference; path = "PingTray-Info.plist"; sourceTree = "<group>"; };
+		79ED4B1314F81D5800F3C6E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		79ED4B1514F81D5800F3C6E6 /* PingTray-Prefix.pch */ = {isa = PBXFileReference; path = "PingTray-Prefix.pch"; sourceTree = "<group>"; };
+		79ED4B1614F81D5800F3C6E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		79ED4B1914F81D5800F3C6E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		79ED4B1B14F81D5800F3C6E6 /* PingTrayAppDelegate.h */ = {isa = PBXFileReference; path = PingTrayAppDelegate.h; sourceTree = "<group>"; };
+		79ED4B1C14F81D5800F3C6E6 /* PingTrayAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PingTrayAppDelegate.m; sourceTree = "<group>"; };
+		79ED4B1F14F81D5800F3C6E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		79ED4B2614F81D5800F3C6E6 /* PingTrayTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PingTrayTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79ED4B2C14F81D5800F3C6E6 /* PingTrayTests-Info.plist */ = {isa = PBXFileReference; path = "PingTrayTests-Info.plist"; sourceTree = "<group>"; };
+		79ED4B2E14F81D5800F3C6E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		79ED4B3014F81D5800F3C6E6 /* PingTrayTests-Prefix.pch */ = {isa = PBXFileReference; path = "PingTrayTests-Prefix.pch"; sourceTree = "<group>"; };
+		79ED4B3114F81D5800F3C6E6 /* PingTrayTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PingTrayTests.h; sourceTree = "<group>"; };
+		79ED4B3314F81D5800F3C6E6 /* PingTrayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PingTrayTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		79ED4B0214F81D5800F3C6E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79ED4B0A14F81D5800F3C6E6 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79ED4B2214F81D5800F3C6E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79ED4B2714F81D5800F3C6E6 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		79ED4AFA14F81D5800F3C6E6 = {
+			isa = PBXGroup;
+			children = (
+				79ED4B0F14F81D5800F3C6E6 /* PingTray */,
+				79ED4B2A14F81D5800F3C6E6 /* PingTrayTests */,
+				79ED4B0814F81D5800F3C6E6 /* Frameworks */,
+				79ED4B0614F81D5800F3C6E6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		79ED4B0614F81D5800F3C6E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				79ED4B0514F81D5800F3C6E6 /* PingTray.app */,
+				79ED4B2614F81D5800F3C6E6 /* PingTrayTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		79ED4B0814F81D5800F3C6E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79ED4B0914F81D5800F3C6E6 /* Cocoa.framework */,
+				79ED4B0B14F81D5800F3C6E6 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79ED4B0B14F81D5800F3C6E6 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79ED4B0C14F81D5800F3C6E6 /* AppKit.framework */,
+				79ED4B0D14F81D5800F3C6E6 /* CoreData.framework */,
+				79ED4B0E14F81D5800F3C6E6 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		79ED4B0F14F81D5800F3C6E6 /* PingTray */ = {
+			isa = PBXGroup;
+			children = (
+				79ED4B1B14F81D5800F3C6E6 /* PingTrayAppDelegate.h */,
+				79ED4B1C14F81D5800F3C6E6 /* PingTrayAppDelegate.m */,
+				79ED4B1E14F81D5800F3C6E6 /* MainMenu.xib */,
+				79ED4B1014F81D5800F3C6E6 /* Supporting Files */,
+			);
+			path = PingTray;
+			sourceTree = "<group>";
+		};
+		79ED4B1014F81D5800F3C6E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				79ED4B1114F81D5800F3C6E6 /* PingTray-Info.plist */,
+				79ED4B1214F81D5800F3C6E6 /* InfoPlist.strings */,
+				79ED4B1514F81D5800F3C6E6 /* PingTray-Prefix.pch */,
+				79ED4B1614F81D5800F3C6E6 /* main.m */,
+				79ED4B1814F81D5800F3C6E6 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		79ED4B2A14F81D5800F3C6E6 /* PingTrayTests */ = {
+			isa = PBXGroup;
+			children = (
+				79ED4B3114F81D5800F3C6E6 /* PingTrayTests.h */,
+				79ED4B3314F81D5800F3C6E6 /* PingTrayTests.m */,
+				79ED4B2B14F81D5800F3C6E6 /* Supporting Files */,
+			);
+			path = PingTrayTests;
+			sourceTree = "<group>";
+		};
+		79ED4B2B14F81D5800F3C6E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				79ED4B2C14F81D5800F3C6E6 /* PingTrayTests-Info.plist */,
+				79ED4B2D14F81D5800F3C6E6 /* InfoPlist.strings */,
+				79ED4B3014F81D5800F3C6E6 /* PingTrayTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		79ED4B0414F81D5800F3C6E6 /* PingTray */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79ED4B3714F81D5800F3C6E6 /* Build configuration list for PBXNativeTarget "PingTray" */;
+			buildPhases = (
+				79ED4B0114F81D5800F3C6E6 /* Sources */,
+				79ED4B0214F81D5800F3C6E6 /* Frameworks */,
+				79ED4B0314F81D5800F3C6E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PingTray;
+			productName = PingTray;
+			productReference = 79ED4B0514F81D5800F3C6E6 /* PingTray.app */;
+			productType = "com.apple.product-type.application";
+		};
+		79ED4B2514F81D5800F3C6E6 /* PingTrayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79ED4B3A14F81D5800F3C6E6 /* Build configuration list for PBXNativeTarget "PingTrayTests" */;
+			buildPhases = (
+				79ED4B2114F81D5800F3C6E6 /* Sources */,
+				79ED4B2214F81D5800F3C6E6 /* Frameworks */,
+				79ED4B2314F81D5800F3C6E6 /* Resources */,
+				79ED4B2414F81D5800F3C6E6 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79ED4B2914F81D5800F3C6E6 /* PBXTargetDependency */,
+			);
+			name = PingTrayTests;
+			productName = PingTrayTests;
+			productReference = 79ED4B2614F81D5800F3C6E6 /* PingTrayTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		79ED4AFC14F81D5800F3C6E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = SetaLabs;
+			};
+			buildConfigurationList = 79ED4AFF14F81D5800F3C6E6 /* Build configuration list for PBXProject "PingTray" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 79ED4AFA14F81D5800F3C6E6;
+			productRefGroup = 79ED4B0614F81D5800F3C6E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				79ED4B0414F81D5800F3C6E6 /* PingTray */,
+				79ED4B2514F81D5800F3C6E6 /* PingTrayTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		79ED4B0314F81D5800F3C6E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79ED4B1414F81D5800F3C6E6 /* InfoPlist.strings in Resources */,
+				79ED4B1A14F81D5800F3C6E6 /* Credits.rtf in Resources */,
+				79ED4B2014F81D5800F3C6E6 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79ED4B2314F81D5800F3C6E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79ED4B2F14F81D5800F3C6E6 /* InfoPlist.strings in Resources */,
+				79ED4B3214F81D5800F3C6E6 /* PingTrayTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		79ED4B2414F81D5800F3C6E6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		79ED4B0114F81D5800F3C6E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79ED4B1714F81D5800F3C6E6 /* main.m in Sources */,
+				79ED4B1D14F81D5800F3C6E6 /* PingTrayAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79ED4B2114F81D5800F3C6E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79ED4B3414F81D5800F3C6E6 /* PingTrayTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		79ED4B2914F81D5800F3C6E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79ED4B0414F81D5800F3C6E6 /* PingTray */;
+			targetProxy = 79ED4B2814F81D5800F3C6E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		79ED4B1214F81D5800F3C6E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79ED4B1314F81D5800F3C6E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		79ED4B1814F81D5800F3C6E6 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79ED4B1914F81D5800F3C6E6 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		79ED4B1E14F81D5800F3C6E6 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79ED4B1F14F81D5800F3C6E6 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		79ED4B2D14F81D5800F3C6E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79ED4B2E14F81D5800F3C6E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		79ED4B3514F81D5800F3C6E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		79ED4B3614F81D5800F3C6E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		79ED4B3814F81D5800F3C6E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PingTray/PingTray-Prefix.pch";
+				INFOPLIST_FILE = "PingTray/PingTray-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		79ED4B3914F81D5800F3C6E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PingTray/PingTray-Prefix.pch";
+				INFOPLIST_FILE = "PingTray/PingTray-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		79ED4B3B14F81D5800F3C6E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PingTray.app/Contents/MacOS/PingTray";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PingTrayTests/PingTrayTests-Prefix.pch";
+				INFOPLIST_FILE = "PingTrayTests/PingTrayTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		79ED4B3C14F81D5800F3C6E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PingTray.app/Contents/MacOS/PingTray";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PingTrayTests/PingTrayTests-Prefix.pch";
+				INFOPLIST_FILE = "PingTrayTests/PingTrayTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		79ED4AFF14F81D5800F3C6E6 /* Build configuration list for PBXProject "PingTray" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79ED4B3514F81D5800F3C6E6 /* Debug */,
+				79ED4B3614F81D5800F3C6E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79ED4B3714F81D5800F3C6E6 /* Build configuration list for PBXNativeTarget "PingTray" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79ED4B3814F81D5800F3C6E6 /* Debug */,
+				79ED4B3914F81D5800F3C6E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		79ED4B3A14F81D5800F3C6E6 /* Build configuration list for PBXNativeTarget "PingTrayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79ED4B3B14F81D5800F3C6E6 /* Debug */,
+				79ED4B3C14F81D5800F3C6E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 79ED4AFC14F81D5800F3C6E6 /* Project object */;
+}
