@@ -115,7 +115,7 @@ static uint16_t in_cksum(const void *buffer, size_t bufferLen)
     [invocation setTarget: self];
     [invocation setSelector:@selector(statusUpdater:)];
     
-    [[NSRunLoop mainRunLoop] addTimer:[NSTimer timerWithTimeInterval:0.1 invocation:invocation repeats: YES] forMode:NSRunLoopCommonModes];
+    [[NSRunLoop mainRunLoop] addTimer:[NSTimer timerWithTimeInterval:1 invocation:invocation repeats: YES] forMode:NSRunLoopCommonModes];
     
 
     if (!(proto = getprotobyname("icmp"))) {
@@ -146,71 +146,74 @@ static uint16_t in_cksum(const void *buffer, size_t bufferLen)
     [statusItem setImage:statusImage]; 
 }
 
-
--(void)statusUpdater:(NSTimer *) t {
-    struct ICMPHeader icmp;
-    socklen_t fromLen;
+-(void)sendPing {
     int icmp_sock = sockfd;
-    struct sockaddr_storage response_addr;
-    fromLen = sizeof(response_addr);
+    struct ICMPHeader icmp;
     struct sockaddr_in addr;
     inet_pton(AF_INET, "8.8.8.8", &addr.sin_addr);
+    if(sockfd != -1) close(sockfd);
+    icmp_sock = sockfd = socket(PF_INET, SOCK_DGRAM, proto->p_proto);
+    if(sockfd == -1) {
+        return;
+    }
+    setSocketNonBlocking(sockfd);
+    icmp.type = ICMP_TYPE_ECHO_REQUEST;
+    icmp.code = 0;
+    icmp.checksum = 0;
+    icmp.sequenceNumber = icmp_id; 
+    icmp.identifier     = icmp_seq;
+    icmp.sentTime       = ustime();
+    icmp.checksum       = in_cksum(&icmp, sizeof(icmp)); 
+    attempt = 1;
+    NSLog(@"%s\n", inet_ntoa(addr.sin_addr));
+    if(sendto(icmp_sock, &icmp, sizeof(icmp), 0, (struct sockaddr *)&addr, sizeof(addr)) == -1){
+        NSLog(@"Error");
+        [self updateImage: PING_NO_CONN]; 
+        // TODO: TREAT THE errno global.
+    } else {
+        NSLog(@"#SENT");
+        pingStatus = PING_WAITING_RESPONSE;
+    }
+}
+-(void)receivePing {
+    struct ICMPHeader icmp;
+    socklen_t fromLen;
+    struct sockaddr_storage response_addr;
+    fromLen = sizeof(response_addr);
+    int icmp_sock = sockfd;
     
-    // PING TIME
+    if(recvfrom(icmp_sock, &icmp, sizeof(icmp), 0, (struct sockaddr *)&response_addr, &fromLen) > 0) {
+        NSLog(@"#OK");
+        if(ustime() - icmp.sentTime > 300) {
+            NSLog(@"Too slow");
+            [self updateImage: PING_SLOW_CONN];
+        } else {
+            NSLog(@"OK");
+            [self updateImage: PING_OK];
+        }
+        pingStatus = PING_NO_PING_SENT;
+    } else {
+        if(attempt % 10 == 0) {
+            attempt = 1;
+            pingStatus = PING_NO_PING_SENT;
+            [self updateImage: PING_NO_CONN];
+        } else {
+            attempt++;
+        }
+    }
+}
+
+-(void)statusUpdater:(NSTimer *) t {
     switch (pingStatus) {
         case PING_NO_PING_SENT:
-            if(sockfd != -1) close(sockfd);
-            icmp_sock = sockfd = socket(PF_INET, SOCK_DGRAM, proto->p_proto);
-            if(sockfd == -1) {
-                return;
-            }
-            setSocketNonBlocking(sockfd);
-            icmp.type = ICMP_TYPE_ECHO_REQUEST;
-            icmp.code = 0;
-            icmp.checksum = 0;
-            icmp.sequenceNumber = icmp_id; 
-            icmp.identifier     = icmp_seq;
-            icmp.sentTime       = ustime();
-            icmp.checksum       = in_cksum(&icmp, sizeof(icmp)); 
-            attempt = 1;
-            NSLog(@"%s\n", inet_ntoa(addr.sin_addr));
-            if(sendto(icmp_sock, &icmp, sizeof(icmp), 0, (struct sockaddr *)&addr, sizeof(addr)) == -1){
-                NSLog(@"Error");
-                [self updateImage: PING_NO_CONN]; 
-                // TODO: TREAT THE errno global.
-            } else {
-                NSLog(@"#SENT");
-                pingStatus = PING_WAITING_RESPONSE;
-            }
+            [self sendPing];
             break;
         case PING_WAITING_RESPONSE:
-            
-            if(recvfrom(icmp_sock, &icmp, sizeof(icmp), 0, (struct sockaddr *)&response_addr, &fromLen) > 0) {
-                NSLog(@"#OK");
-                if(ustime() - icmp.sentTime > 300) {
-                    NSLog(@"Too slow");
-                    [self updateImage: PING_SLOW_CONN];
-                } else {
-                    NSLog(@"OK");
-                    [self updateImage: PING_OK];
-                }
-                pingStatus = PING_NO_PING_SENT;
-            } else {
-                if(attempt % 10 == 0) {
-                    attempt = 1;
-                    pingStatus = PING_NO_PING_SENT;
-                    [self updateImage: PING_NO_CONN];
-                } else {
-                    attempt++;
-                }
-            }
+            [self receivePing];
             break;
         default:
             break;
     }
-
-    
-
 }
 
 
