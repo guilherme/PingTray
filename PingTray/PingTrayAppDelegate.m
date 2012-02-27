@@ -38,8 +38,6 @@ struct ICMPHeader {
 };
 
 /* unix time in micro seconds */
-/* TODO: investigate it more */
-/* How to get such small time ? */
 int64_t ustime(void) {
     struct timeval tv;
     long long ust;
