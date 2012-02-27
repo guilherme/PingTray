@@ -131,12 +131,9 @@ static uint16_t in_cksum(const void *buffer, size_t bufferLen)
         NSLog(@"Unable to open a socket file descriptor.");
         return;
     }
-    addr = malloc(sizeof(struct sockaddr_in));
-    inet_aton("8.8.8.8", (struct in_addr *)&addr->sin_addr); // DO NOT HANDLE IPv6 use inet_pton
     pingStatus = 0;
     icmp_id = random()&0xffff;
     icmp_seq = random()&0xffff;
-    setSocketNonBlocking(sockfd);
     
 }
 - (void)updateImage:(int) image_id {   
@@ -155,9 +152,21 @@ static uint16_t in_cksum(const void *buffer, size_t bufferLen)
 -(void)statusUpdater:(NSTimer *) t {
     struct ICMPHeader icmp;
     socklen_t fromLen;
+    int icmp_sock = sockfd;
+    struct sockaddr_storage response_addr;
+    fromLen = sizeof(response_addr);
+    struct sockaddr_in addr;
+    inet_pton(AF_INET, "8.8.8.8", &addr.sin_addr);
+    
     // PING TIME
     switch (pingStatus) {
         case PING_NO_PING_SENT:
+            if(sockfd != -1) close(sockfd);
+            icmp_sock = sockfd = socket(PF_INET, SOCK_DGRAM, proto->p_proto);
+            if(sockfd == -1) {
+                return;
+            }
+            setSocketNonBlocking(sockfd);
             icmp.type = ICMP_TYPE_ECHO_REQUEST;
             icmp.code = 0;
             icmp.checksum = 0;
@@ -166,7 +175,8 @@ static uint16_t in_cksum(const void *buffer, size_t bufferLen)
             icmp.sentTime       = ustime();
             icmp.checksum       = in_cksum(&icmp, sizeof(icmp)); 
             attempt = 1;
-            if(sendto(sockfd, &icmp, sizeof(icmp), 0, (struct sockaddr *)&addr, sizeof(addr)) == -1){
+            NSLog(@"%s\n", inet_ntoa(addr.sin_addr));
+            if(sendto(icmp_sock, &icmp, sizeof(icmp), 0, (struct sockaddr *)&addr, sizeof(addr)) == -1){
                 NSLog(@"Error");
                 [self updateImage: PING_NO_CONN]; 
                 // TODO: TREAT THE errno global.
@@ -176,8 +186,8 @@ static uint16_t in_cksum(const void *buffer, size_t bufferLen)
             }
             break;
         case PING_WAITING_RESPONSE:
-            fromLen = sizeof(addr);
-            if(recvfrom(sockfd, &icmp, sizeof(icmp), 0, (struct sockaddr *)&addr, &fromLen) > 0) {
+            
+            if(recvfrom(icmp_sock, &icmp, sizeof(icmp), 0, (struct sockaddr *)&response_addr, &fromLen) > 0) {
                 NSLog(@"#OK");
                 if(ustime() - icmp.sentTime > 300) {
                     NSLog(@"Too slow");

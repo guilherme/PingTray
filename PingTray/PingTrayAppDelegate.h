@@ -16,7 +16,6 @@
     
     int sockfd;
     struct  protoent *proto;
-    struct sockaddr_in *addr;
     int pingStatus;
     int icmp_id;
     int icmp_seq;
