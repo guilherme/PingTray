@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7931F1BA14F919DB003AC7DB /* red-ball.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7931F1B714F919DB003AC7DB /* red-ball.gif */; };
+		7931F1BB14F919DB003AC7DB /* green-ball.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7931F1B814F919DB003AC7DB /* green-ball.gif */; };
+		7931F1BC14F919DB003AC7DB /* yellow-ball.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7931F1B914F919DB003AC7DB /* yellow-ball.gif */; };
 		79ED4B0A14F81D5800F3C6E6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79ED4B0914F81D5800F3C6E6 /* Cocoa.framework */; };
 		79ED4B1414F81D5800F3C6E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79ED4B1214F81D5800F3C6E6 /* InfoPlist.strings */; };
 		79ED4B1714F81D5800F3C6E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79ED4B1614F81D5800F3C6E6 /* main.m */; };
@@ -30,23 +33,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7931F1B714F919DB003AC7DB /* red-ball.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "red-ball.gif"; sourceTree = "<group>"; };
+		7931F1B814F919DB003AC7DB /* green-ball.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "green-ball.gif"; sourceTree = "<group>"; };
+		7931F1B914F919DB003AC7DB /* yellow-ball.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "yellow-ball.gif"; sourceTree = "<group>"; };
 		79ED4B0514F81D5800F3C6E6 /* PingTray.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PingTray.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79ED4B0914F81D5800F3C6E6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		79ED4B0C14F81D5800F3C6E6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		79ED4B0D14F81D5800F3C6E6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		79ED4B0E14F81D5800F3C6E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		79ED4B1114F81D5800F3C6E6 /* PingTray-Info.plist */ = {isa = PBXFileReference; path = "PingTray-Info.plist"; sourceTree = "<group>"; };
+		79ED4B1114F81D5800F3C6E6 /* PingTray-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PingTray-Info.plist"; sourceTree = "<group>"; };
 		79ED4B1314F81D5800F3C6E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		79ED4B1514F81D5800F3C6E6 /* PingTray-Prefix.pch */ = {isa = PBXFileReference; path = "PingTray-Prefix.pch"; sourceTree = "<group>"; };
+		79ED4B1514F81D5800F3C6E6 /* PingTray-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PingTray-Prefix.pch"; sourceTree = "<group>"; };
 		79ED4B1614F81D5800F3C6E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		79ED4B1914F81D5800F3C6E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		79ED4B1B14F81D5800F3C6E6 /* PingTrayAppDelegate.h */ = {isa = PBXFileReference; path = PingTrayAppDelegate.h; sourceTree = "<group>"; };
+		79ED4B1B14F81D5800F3C6E6 /* PingTrayAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PingTrayAppDelegate.h; sourceTree = "<group>"; };
 		79ED4B1C14F81D5800F3C6E6 /* PingTrayAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PingTrayAppDelegate.m; sourceTree = "<group>"; };
 		79ED4B1F14F81D5800F3C6E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		79ED4B2614F81D5800F3C6E6 /* PingTrayTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PingTrayTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		79ED4B2C14F81D5800F3C6E6 /* PingTrayTests-Info.plist */ = {isa = PBXFileReference; path = "PingTrayTests-Info.plist"; sourceTree = "<group>"; };
+		79ED4B2C14F81D5800F3C6E6 /* PingTrayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PingTrayTests-Info.plist"; sourceTree = "<group>"; };
 		79ED4B2E14F81D5800F3C6E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		79ED4B3014F81D5800F3C6E6 /* PingTrayTests-Prefix.pch */ = {isa = PBXFileReference; path = "PingTrayTests-Prefix.pch"; sourceTree = "<group>"; };
+		79ED4B3014F81D5800F3C6E6 /* PingTrayTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PingTrayTests-Prefix.pch"; sourceTree = "<group>"; };
 		79ED4B3114F81D5800F3C6E6 /* PingTrayTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PingTrayTests.h; sourceTree = "<group>"; };
 		79ED4B3314F81D5800F3C6E6 /* PingTrayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PingTrayTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +121,9 @@
 				79ED4B1B14F81D5800F3C6E6 /* PingTrayAppDelegate.h */,
 				79ED4B1C14F81D5800F3C6E6 /* PingTrayAppDelegate.m */,
 				79ED4B1E14F81D5800F3C6E6 /* MainMenu.xib */,
+				7931F1B714F919DB003AC7DB /* red-ball.gif */,
+				7931F1B814F919DB003AC7DB /* green-ball.gif */,
+				7931F1B914F919DB003AC7DB /* yellow-ball.gif */,
 				79ED4B1014F81D5800F3C6E6 /* Supporting Files */,
 			);
 			path = PingTray;
@@ -225,6 +234,9 @@
 				79ED4B1414F81D5800F3C6E6 /* InfoPlist.strings in Resources */,
 				79ED4B1A14F81D5800F3C6E6 /* Credits.rtf in Resources */,
 				79ED4B2014F81D5800F3C6E6 /* MainMenu.xib in Resources */,
+				7931F1BA14F919DB003AC7DB /* red-ball.gif in Resources */,
+				7931F1BB14F919DB003AC7DB /* green-ball.gif in Resources */,
+				7931F1BC14F919DB003AC7DB /* yellow-ball.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +456,7 @@
 				79ED4B3914F81D5800F3C6E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79ED4B3A14F81D5800F3C6E6 /* Build configuration list for PBXNativeTarget "PingTrayTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +465,7 @@
 				79ED4B3C14F81D5800F3C6E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

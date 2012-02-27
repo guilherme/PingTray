@@ -8,10 +8,22 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface PingTrayAppDelegate : NSObject <NSApplicationDelegate> {
-@private
-    NSWindow *window;
+@interface PingTrayAppDelegate : NSObject <NSApplicationDelegate> { 
+    IBOutlet NSMenu *statusMenu;
+    NSStatusItem *statusItem;
+    NSImage *statusImage;
+    IBOutlet NSWindow *settingsWindow;
+    
+    int sockfd;
+    struct  protoent *proto;
+    struct sockaddr_in *addr;
+    int pingStatus;
+    int icmp_id;
+    int icmp_seq;
+    int attempt;
 }
+
+- (IBAction)doSomething:(id)sender;
 
 @property (assign) IBOutlet NSWindow *window;
 
